@@ -1,0 +1,142 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,900;1,700&family=Tilt+Warp&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(img/landscape.jpg);
+ 
+}
+
+.navlogo{
+    height: 75px;
+    width: 75px;
+    
+}
+
+.navbar{
+position: absolute;
+padding: 50px;
+display: flex;
+transition: background 0.5s, padding 0.5s;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+box-sizing: border-box;
+}
+.navbar.active{
+    background-color: #efefef;
+    padding: 16px 100px;
+}
+
+
+.navbar a {
+color: white;
+}
+.navbar a:hover {
+    color: rgb(221, 88, 0);
+    transition: 500ms;
+    
+    }
+    
+
+
+.navbar .logo{
+    font-size: 2em;
+    font-weight: bold;
+    
+    }
+
+    .navbar .navLinks {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .navLinks ul {
+        display: flex;
+    }
+    
+    .navbar .navLinks ul li{
+        display: flex;
+        margin: 0 25px;
+    }
+
+    .navbar .navLinks ul li.active a{
+       color: rgb(190, 158, 15);
+       font-weight: 500;
+    }
+
+    
+.navbar .menu{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 35px;
+    
+}
+
+
+
+
+    @media screen and (max-width:900px) {
+
+        .navbar .logo{
+            position: absolute;
+          
+            top: 25px;
+            left: 25px;
+            
+            }
+
+        .navbar{
+            padding: 0;
+        }
+        
+        .navbar .menu{
+            display: block;
+        }
+
+        .navLinks{
+            top: 0;
+            left: 0;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background-color:rgb(255, 255, 255,0.20);
+            backdrop-filter: blur(8px);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            margin-left: -100%;
+            transition:  all 0.5s ease;
+        }
+
+
+        .navLinks.mobile-menu{
+
+            margin-left: 0;
+        
+        }
+        .navLinks ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar .navLinks ul li{
+      margin: 25px 0;
+      font-size: 1.2em;
+        }
+    
+        
+    }
